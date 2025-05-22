@@ -24,10 +24,13 @@ Licencia: Este proyecto está bajo la licencia MIT.
 | Uso - Requisitos |
  ------------------
 1 - Se deben instalar los siguientes módulos:
+
     pip install pyfiglet colorama
 
 2 - Se deben dar permisos de ejecución al script
+
     chmod +x scan.py
 
 3 - Ejecución
+
     python3 scan.py
