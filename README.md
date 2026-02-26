@@ -1,36 +1,29 @@
-🛡️ PComb Parser – Python Port Scanner
+# 🛡 Python Port Scanner v2.0
 
-PComb Parser es una herramienta escrita en Python para realizar escaneos de puertos TCP sobre un objetivo específico. Su diseño combina una interfaz colorida en terminal, generación automática de reportes y tres modos de escaneo adaptados a diferentes necesidades de reconocimiento.
+Un escáner de puertos TCP multihilo desarrollado en Python.
 
-Características
+Proyecto educativo orientado a prácticas de ciberseguridad y laboratorio local.
 
-Escaneo rápido de puertos comunes
+---
 
-Escaneo personalizado por el usuario
+## 🚀 Características
 
-Escaneo completo de puertos 1 al 1024
+- Escaneo rápido de puertos comunes
+- Escaneo personalizado
+- Escaneo completo (1–1024)
+- Multithreading para mayor velocidad
+- Banner grabbing básico
+- Generación automática de reportes
+- Validación de IP
+- Interfaz CLI con colores
 
-Generación automática de reportes con timestamp
+---
 
-Banner en ASCII con colores usando pyfiglet y colorama
+## 📦 Requisitos
 
-Diseñado para CTFs, pentesting o práctica de hacking ético
+Python 3.8+
 
-Autor: orami
+Instalar dependencias:
 
-Licencia: Este proyecto está bajo la licencia MIT. 
-
- ------------------
-| Uso - Requisitos |
- ------------------
-1 - Se deben instalar los siguientes módulos:
-
-    pip install pyfiglet colorama
-
-2 - Se deben dar permisos de ejecución al script
-
-    chmod +x scan.py
-
-3 - Ejecución
-
-    python3 scan.py
+```bash
+pip install -r requirements.txt
