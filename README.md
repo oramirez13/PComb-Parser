@@ -1,12 +1,12 @@
-# 🛡 Python Port Scanner v2.0
+# Python Port Scanner v2.0
 
 Un escáner de puertos TCP multihilo desarrollado en Python.
 
-Proyecto educativo orientado a prácticas de ciberseguridad y laboratorio local.
+Proyecto educativo orientado a prácticas de ciberseguridad en un laboratorio local.
 
 ---
 
-## 🚀 Características
+## Características
 
 - Escaneo rápido de puertos comunes
 - Escaneo personalizado
@@ -19,7 +19,7 @@ Proyecto educativo orientado a prácticas de ciberseguridad y laboratorio local.
 
 ---
 
-## 📦 Requisitos
+## Requisitos
 
 Python 3.8+
 
