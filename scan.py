@@ -65,7 +65,6 @@ def escanear_puerto(ip, puerto):
 
         if resultado == 0:
             try:
-                sock.send(b"\n")
                 banner = sock.recv(1024).decode(errors="ignore").strip()
             except:
                 banner = "No banner disponible"
@@ -176,3 +175,4 @@ def menu():
 # =========================
 if __name__ == "__main__":
     menu()
+
