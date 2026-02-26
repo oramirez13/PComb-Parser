@@ -38,13 +38,20 @@ def validar_ip(ip):
 # CREAR ARCHIVO DE REPORTE
 # =========================
 def crear_archivo_reporte(ip):
+    # Crear carpeta reportes si no existe
+    os.makedirs("reportes", exist_ok=True)
+
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    nombre = f"reporte_scan_{ip}_{timestamp}.txt"
-    archivo = open(nombre, "w")
+    nombre_archivo = f"reporte_scan_{ip}_{timestamp}.txt"
+
+    ruta_completa = os.path.join("reportes", nombre_archivo)
+
+    archivo = open(ruta_completa, "w")
     archivo.write(f"Resultado del escaneo de {ip}\n")
     archivo.write("=" * 50 + "\n")
     archivo.write(f"Fecha: {datetime.datetime.now()}\n\n")
-    return archivo
+
+    return archivo, ruta_completa
 
 
 # =========================
@@ -63,11 +70,13 @@ def escanear_puerto(ip, puerto):
             except:
                 banner = "No banner disponible"
 
+            sock.close()
             return puerto, banner
 
         sock.close()
     except:
         pass
+
     return None
 
 
@@ -112,10 +121,11 @@ def ejecutar_escaneo(ip, puertos):
         print(f"{Fore.RED}[!] IP inválida. Usa formato 192.168.1.1\n")
         return
 
-    archivo = crear_archivo_reporte(ip)
+    archivo, ruta = crear_archivo_reporte(ip)
     escanear_puertos(ip, puertos, archivo)
     archivo.close()
-    print(f"{Fore.CYAN}[✔] Reporte guardado correctamente.\n")
+
+    print(f"{Fore.CYAN}[✔] Reporte guardado en: {ruta}\n")
 
 
 # =========================
