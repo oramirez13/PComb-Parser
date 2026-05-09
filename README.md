@@ -1,60 +1,38 @@
-# PComb Parser - Multi-threaded Scanner & Analyzer
+# PComb Parser
 
-PComb Parser es una herramienta integral de reconocimiento de red diseñada para la velocidad y la claridad. Combina un escáner de puertos de alto rendimiento (multihilo) con un motor de análisis de reportes basado en expresiones regulares, permitiendo a los investigadores de seguridad identificar vectores de ataque en tiempo récord.
+PComb Parser es una herramienta de consola para practicar escaneo básico de puertos y lectura de reportes guardados.
 
----
+## Funciones
 
-## Características Principales
+- Escaneo de puertos TCP por rangos simples.
+- Generación de reportes `.txt`.
+- Lectura de reportes previamente guardados.
 
-* **Escaneo de Alta Velocidad**: Implementa `ThreadPoolExecutor` con 100 hilos concurrentes para escaneos locales y externos ultrarrápidos.
-* **Banner Grabbing**: Intenta capturar la cabecera de respuesta de cada puerto abierto para identificar servicios y versiones.
-* **Generación Automática de Reportes**: Guarda cada sesión de escaneo en archivos de texto organizados por IP y fecha dentro de la carpeta `/reportes`.
-* **Analizador Inteligente (Parser)**: Procesa reportes existentes utilizando **Regex** para extraer una tabla limpia de puertos y servicios, facilitando la lectura de logs extensos.
-* **Validación de Objetivos**: Incluye un módulo de validación de direcciones IP para prevenir errores de ejecución.
+## Requisitos
 
----
+- Python 3.11 o superior
 
-## Interfaz de Usuario
-
-```
-██████╗  ██████╗ ██████╗ ███╗   ███╗██████╗ 
-██╔══██╗██╔════╝██╔═══██╗████╗ ████║██╔══██╗
-██████╔╝██║     ██║   ██║██╔████╔██║██████╔╝
-██╔═══╝ ██║     ██║   ██║██║╚██╔╝██║██╔══██╗
-██║     ╚██████╗╚██████╔╝██║ ╚═╝ ██║██████╔╝
-╚═╝      ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ 
-        Scanner & Report Analyzer v3.0
-```
-
----
-
-## Instalación y Uso
-
-Se recomienda el uso de un entorno virtual para gestionar las dependencias de forma aislada.
+## Instalación
 
 ```bash
-# Preparación del entorno
-python -m venv venv
-source venv/bin/activate
-
-# Instalación de dependencias
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-
-# Ejecución
-python pcomb_parser.py
 ```
 
----
+## Ejecución
 
-## Flujo de Trabajo Recomendado
-
-1. **Opción [1]**: Realiza un escaneo sobre el objetivo (ej. una VM de Windows o Linux).
-2. **Resultados**: El script guardará el log detallado automáticamente.
-3. **Opción [2]**: Carga el reporte generado para ver un resumen ejecutivo de los puertos y banners encontrados sin ruido innecesario.
-
----
-
-## Autor
-**ORAMI (2025)**
-Estudiante de Ciberseguridad | Desarrollo Web
+```bash
+python scan.py
 ```
+
+## Estructura
+
+- `scan.py`: archivo principal del proyecto.
+- `requirements.txt`: dependencias usadas por el programa.
+- `reportes/`: carpeta donde se guardan los reportes del escaneo.
+- `img/`: capturas opcionales.
+
+## Nota
+
+Este proyecto fue ajustado para mantener una lógica simple y fácil de seguir para un estudiante principiante.
