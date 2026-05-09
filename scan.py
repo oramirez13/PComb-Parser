@@ -172,7 +172,9 @@ def ejecutar_escaneo_completo(ip, ports):
 
     # Si no se encontro nada, se informa y se sale.
     if len(open_ports) == 0:
-        print(Fore.RED + "\n[-] No se encontraron puertos abiertos en el rango elegido.")
+        print(
+            Fore.RED + "\n[-] No se encontraron puertos abiertos en el rango elegido."
+        )
         return
 
     # Esta linea guarda el reporte final en disco.
@@ -280,7 +282,7 @@ def menu():
 
         # Si la opcion es 3, el programa termina.
         elif option == "3":
-            print(Fore.MAGENTA + "Cerrando PComb Parser...")
+            print(Fore.MAGENTA + "Hasta la vista hacker...")
             break
 
         # Cualquier otro valor se considera invalido.
