@@ -2,6 +2,11 @@
 
 PComb Parser es una herramienta de consola para practicar escaneo básico de puertos y lectura de reportes guardados.
 
+## Screenshots
+
+![PComb Parser](img/Screenshot_20260226_145658.png)
+![PComb Parser](img/Screenshot_20260226_150646.png)
+
 ## Funciones
 
 - Escaneo de puertos TCP por rangos simples.
